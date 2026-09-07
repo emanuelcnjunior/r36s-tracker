@@ -1,0 +1,18 @@
+services:
+  r36s-tracker:
+    build: .
+    container_name: r36s-tracker
+    restart: unless-stopped
+    ports:
+      - "8150:8080"
+    environment:
+      R36S_HOST: ${R36S_HOST:-192.168.0.122}
+      R36S_PORT: ${R36S_PORT:-22}
+      R36S_USER: ${R36S_USER:-ark}
+      R36S_PASSWORD: ${R36S_PASSWORD}
+      SYNC_INTERVAL_SECONDS: ${SYNC_INTERVAL_SECONDS:-300}
+      DATABASE_PATH: /data/r36s.db
+      MEDIA_DIR: /data/media
+      SSH_RETRIES: ${SSH_RETRIES:-3}
+    volumes:
+      - ./data:/data
