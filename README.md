@@ -318,6 +318,8 @@ A interface possui:
 
 No desktop, os cards são exibidos em grid.
 
+<img width="1919" height="864" alt="image" src="https://github.com/user-attachments/assets/3bb79f6e-1413-4b3b-884e-c5b71df4b3d1" />
+
 No mobile, o layout muda para uma coluna.
 
 ---
